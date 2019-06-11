@@ -15,8 +15,6 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def won?(board)
-
 def X_win?(board) WIN_COMBINATIONS.select do |winning_combination|
     winning_combination.all? do |value|
       board[value]=="X"
@@ -30,6 +28,8 @@ def O_win?(board) WIN_COMBINATIONS.select do |winning_combination|
     end
   end[0]
 end
+
+def won?(board)
 
 if X_win?(board) == nil && O_win?(board) == nil
   nil
@@ -62,3 +62,6 @@ end
 def over?(board)
   draw?(board) || won?(board)
 end
+
+def winner?
+  if win?
