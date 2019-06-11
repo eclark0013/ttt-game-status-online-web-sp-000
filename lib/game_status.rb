@@ -17,21 +17,25 @@ WIN_COMBINATIONS = [
 
 def won?(board)
 
-def X_win? WIN_COMBINATIONS.select do |winning_combination|
+def X_win?(board) WIN_COMBINATIONS.select do |winning_combination|
     winning_combination.all? do |value|
       board[value]=="X"
     end
   end[0]
 end
 
-def O_win? WIN_COMBINATIONS.select do |winning_combination|
+def O_win?(board) WIN_COMBINATIONS.select do |winning_combination|
     winning_combination.all? do |value|
       board[value]=="O"
     end
   end[0]
 end
 
-if X_win? && O_win?
-
+if X_win?(board) == nil && O_win?(board) == nil
+  nil
+elsif X_win?(board) == nil
+  O_win?(board)
+else
+  X_win?(board)
 
 end
