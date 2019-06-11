@@ -65,9 +65,9 @@ end
 
 def winner(board)
   if X_win?(board)
-    X
+    "X"
   elsif O_win?(board)
-    O
+    "O"
   else
     nil
   end
