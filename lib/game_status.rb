@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.any? do |winning_combination|
-    winning_combination.select? do |slot|
+    winning_combination.select do |slot|
       board[slot].all? {|value| value==X}
     end
   end
