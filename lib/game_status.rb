@@ -16,10 +16,10 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  winners = false
-  winners = (WIN_COMBINATIONS.select do |winning_combination|
+WIN_COMBINATIONS.select do |winning_combination|
     winning_combination.all? do |value|
       board[value]=="X" || board[value]=="O"
-  end)
+  end
+end 
 
 end
