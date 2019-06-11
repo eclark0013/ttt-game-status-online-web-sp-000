@@ -42,7 +42,5 @@ end
 end
 
 def full?(board)
-  board.none? do |letter|
-    letter==" "
-  end
+  board.none? {|letter| letter==" "}
 end
