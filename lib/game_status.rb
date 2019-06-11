@@ -37,5 +37,6 @@ elsif X_win?(board) == nil
   O_win?(board)
 else
   X_win?(board)
+end
 
 end
