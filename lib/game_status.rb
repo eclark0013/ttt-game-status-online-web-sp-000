@@ -42,7 +42,7 @@ end
 end
 
 def full?(board)
-  board.none? do |index|
-    position_taken?(board, index)
+  board.none? do |letter|
+    letter==" "
   end
 end
