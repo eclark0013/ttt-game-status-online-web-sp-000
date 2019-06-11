@@ -18,8 +18,13 @@ WIN_COMBINATIONS = [
 def won?(board)
 WIN_COMBINATIONS.select do |winning_combination|
     winning_combination.all? do |value|
-      board[value]=="X" || board[value]=="O"
-  end
-end[1] 
+      board[value]=="X"
+    end
+      ||
+    winning_combination.all? do |value|
+      board[value]=="O"
+    end
+
+end[1]
 
 end
