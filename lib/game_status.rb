@@ -62,3 +62,13 @@ end
 def over?(board)
   draw?(board) || won?(board)
 end
+
+def winner?(board)
+  if X_win?(board)
+    X
+  elsif O_win?(board)
+    O
+  else
+    nil
+  end
+end
