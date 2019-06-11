@@ -20,6 +20,5 @@ WIN_COMBINATIONS.select do |winning_combination|
     winning_combination.all? do |value|
       board[value]=="X"
     end
-end[1]
 
 end
