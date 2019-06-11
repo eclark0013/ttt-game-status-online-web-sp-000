@@ -45,6 +45,10 @@ def full?(board)
   board.none? {|letter| letter==" "}
 end
 
+def empty_spots?(board)
+  !full?(board)
+end
+
 def draw?(board)
   if won?(board)
     false
@@ -54,3 +58,5 @@ def draw?(board)
     true
   end
 end
+
+def over?
