@@ -44,3 +44,8 @@ end
 def full?(board)
   board.none? {|letter| letter==" "}
 end
+
+def draw?(board)
+  if won?(board)
+    false
+  elsif !full?(board)
