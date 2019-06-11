@@ -63,7 +63,7 @@ def over?(board)
   draw?(board) || won?(board)
 end
 
-def winner?(board)
+def winner(board)
   if X_win?(board)
     X
   elsif O_win?(board)
