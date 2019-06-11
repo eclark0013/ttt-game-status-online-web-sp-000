@@ -17,13 +17,13 @@ WIN_COMBINATIONS = [
 
 def won?(board)
 WIN_COMBINATIONS.select do |winning_combination|
-    winning_combination.all? do |value|
+    (winning_combination.all? do |value|
       board[value]=="X"
-    end
+    end)
       ||
-    winning_combination.all? do |value|
+    (winning_combination.all? do |value|
       board[value]=="O"
-    end
+    end)
   end 
 
 end[1]
